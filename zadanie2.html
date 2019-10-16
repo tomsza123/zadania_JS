@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    .big{
+        font-size: 30px;
+    }
+    
+    </style>
+
+</head>
+<body>
+    <button>Dodaj element listy</button>
+    <ul></ul>
+
+
+    <script>
+        
+        let button = document.querySelector("button");
+        let ul = document.querySelector("ul");
+        
+        let number = 1;
+        
+        button.addEventListener("click", function(){
+
+            let li = document.createElement("li");
+            li.textContent = number;
+            if(number%3 == 0){
+                li.classList.add("big")
+            }
+            ul.appendChild(li);
+
+            number += 2;
+
+        } )
+    
+    
+    </script>
+</body>
+</html>
